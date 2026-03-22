@@ -154,14 +154,23 @@
 
   /* ══════════════════════════════════════
      5. REVEAL ON SCROLL
+     Marca todos os elementos como visíveis
+     imediatamente — o CSS já garante que
+     tudo aparece sem depender do observer.
   ══════════════════════════════════════ */
+  // Marca tudo como visível na inicialização
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function (el) {
+    el.classList.add('visible');
+  });
+
+  // Observer mantido para animações suaves ao rolar (opcional)
   const revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05 });
 
   document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function (el) {
     revealObserver.observe(el);

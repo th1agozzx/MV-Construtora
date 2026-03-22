@@ -59,19 +59,17 @@ nav.scrolled {
 .nav-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 
 .logo-img {
-  height: 48px;
-  width: 48px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 6px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  transition: height var(--transition), width var(--transition), opacity var(--transition);
+  height: 46px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.7));
+  transition: height var(--transition), opacity var(--transition);
 }
 nav.scrolled .logo-img {
-  height: 40px;
-  width: 40px;
+  height: 36px;
 }
-.logo-img:hover { opacity: .88; }
+.logo-img:hover { opacity: .85; }
 
 .logo-fallback { display: none; align-items: center; gap: 10px; }
 
@@ -391,13 +389,14 @@ section { padding: var(--section-pad); }
   color: var(--silver); max-width: 540px; margin-bottom: 56px;
 }
 
-/* Reveal on scroll */
-.reveal       { opacity: 0; transform: translateY(28px); transition: opacity var(--transition-slow), transform var(--transition-slow); }
-.reveal-left  { opacity: 0; transform: translateX(-28px); transition: opacity var(--transition-slow), transform var(--transition-slow); }
-.reveal-right { opacity: 0; transform: translateX(28px);  transition: opacity var(--transition-slow), transform var(--transition-slow); }
-.reveal.visible, .reveal-left.visible, .reveal-right.visible {
-  opacity: 1; transform: translate(0);
-}
+/* Reveal on scroll — sempre visível, anima suavemente quando entra na tela */
+.reveal       { opacity: 1; transform: translateY(0); transition: opacity var(--transition-slow), transform var(--transition-slow); }
+.reveal-left  { opacity: 1; transform: translateX(0); transition: opacity var(--transition-slow), transform var(--transition-slow); }
+.reveal-right { opacity: 1; transform: translateX(0); transition: opacity var(--transition-slow), transform var(--transition-slow); }
+.reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: translate(0); }
+
+/* ── HERO sempre visível ── */
+#hero .reveal, #hero .reveal-left, #hero .reveal-right { opacity: 1 !important; transform: none !important; }
 
 /* ══════════════════════════════════════
    SERVIÇOS
@@ -897,13 +896,12 @@ footer {
   gap: 48px; margin-bottom: 48px;
 }
 .footer-logo-img {
-  height: 64px;
-  width: 64px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
+  height: 52px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
   margin-bottom: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  filter: drop-shadow(0 1px 6px rgba(0,0,0,0.6));
 }
 .footer-brand .logo-fallback { margin-bottom: 16px; }
 .footer-brand p { font-size: 14px; line-height: 1.7; color: var(--silver); margin-bottom: 24px; }
