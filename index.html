@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MV Construtora – Soluções completas em terraplanagem, locação de máquinas pesadas e transporte de materiais desde 2011.">
+  <title>MV Construtora – Terraplanagem, Locação e Transporte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <a href="#hero">
+        <img src="images/Logo_MV.png" alt="MV Construtora" class="logo-img"
+             onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
+      </a>
+      <!-- Fallback caso não exista arquivo de logo -->
+      <div class="logo-fallback" id="logoFallback">
+        <div class="logo-box">MV</div>
+        <span class="logo-text">MV <span>Construtora</span></span>
+      </div>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviçs</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#area">Área de Atuação</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato" class="nav-cta">Orçamento</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">✕</button>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#area">Área de Atuação</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Solicitar Orçamento</a>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-scene">
+      <div class="hero-pattern"></div>
+      <div id="particles"></div>
+
+      <!-- Silhueta SVG escavadeira decorativa -->
+      <svg class="excavator-anim" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="0" y="290" width="520" height="70" fill="rgba(192,0,26,0.12)"/>
+        <rect x="60" y="268" width="180" height="32" rx="16" fill="rgba(192,0,26,0.25)"/>
+        <ellipse cx="80" cy="284" rx="16" ry="16" fill="rgba(192,0,26,0.3)"/>
+        <ellipse cx="222" cy="284" rx="16" ry="16" fill="rgba(192,0,26,0.3)"/>
+        <rect x="80" y="200" width="160" height="80" rx="4" fill="rgba(192,0,26,0.2)"/>
+        <rect x="170" y="160" width="80" height="60" rx="4" fill="rgba(192,0,26,0.3)"/>
+        <rect x="180" y="170" width="60" height="30" rx="2" fill="rgba(192,0,26,0.15)"/>
+        <g style="transform-origin:220px 200px;animation:boomSway 4s ease-in-out infinite;">
+          <rect x="218" y="100" width="20" height="110" rx="8" transform="rotate(-25 218 200)" fill="rgba(192,0,26,0.35)"/>
+          <rect x="278" y="80" width="16" height="80" rx="6" transform="rotate(15 278 160)" fill="rgba(192,0,26,0.3)"/>
+          <path d="M310 140 L340 130 L350 155 L320 165 Z" fill="rgba(192,0,26,0.4)"/>
+        </g>
+        <rect x="50" y="205" width="40" height="50" rx="2" fill="rgba(192,0,26,0.2)"/>
+      </svg>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">Desde 2011 — Referência em Terraplanagem</div>
+      <h1 class="hero-title reveal">
+        MV <span class="accent">Construtora</span>
+        <span class="line-2">Soluções Completas em<br>Terraplanagem, Locação<br>e Transporte</span>
+      </h1>
+      <p class="hero-sub reveal">
+        <strong>Sua obra no caminho certo</strong> com eficiência, expertise e mais de 14 anos de experiência no mercado da construção.
+      </p>
+      <div class="hero-ctas reveal">
+        <a href="#contato" class="btn-primary">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Solicite um Orçamento Rápido
+        </a>
+        <a href="#servicos" class="btn-outline">Nossos Serviços</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num" data-target="14" data-suffix="+">0</div>
+        <div class="stat-label">Anos de Mercado</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="350" data-suffix="+">0</div>
+        <div class="stat-label">Projetos Concluídos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="40" data-suffix="+">0</div>
+        <div class="stat-label">Equipamentos na Frota</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="98" data-suffix="%">0</div>
+        <div class="stat-label">% Clientes Satisfeitos</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">Rolar</div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SERVIÇOS
+  ══════════════════════════════════════ -->
+  <section id="servicos">
+    <div class="section-label reveal">O Que Fazemos</div>
+    <h2 class="section-title reveal">Nossos <span class="red">Serviços</span></h2>
+    <p class="section-sub reveal">Soluções completas para obras e projetos de qualquer porte, com equipamentos modernos e equipe especializada.</p>
+
+    <div class="services-grid">
+
+      <!-- Serviço 1 -->
+      <div class="service-card reveal">
+        <div class="service-visual sv-excavator">
+          <!-- IMAGEM: substitua pelo caminho da sua imagem -->
+          <!-- <img src="images/servico-locacao.jpg" alt="Locação de Máquinas" class="service-img"> -->
+         <img src="images/frota carregadeira.png" alt="Locação de Máquinas" class="service-img">
+        </div>
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+        </div>
+        <h3 class="service-title">Locação de Máquinas Pesadas</h3>
+        <p class="service-desc">Equipamentos de alta performance para locação, com manutenção inclusa, operadores qualificados e suporte técnico 24h.</p>
+        <div class="service-tags">
+          <span class="tag">Escavadeiras</span>
+          <span class="tag">Retroescavadeiras</span>
+          <span class="tag">Tratores</span>
+          <span class="tag">Rolos Compactadores</span>
+          <span class="tag">Motoniveladoras</span>
+        </div>
+        <a href="#contato" class="service-link">
+          Ver Mais Detalhes
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+        </a>
+      </div>
+
+      <!-- Serviço 2 -->
+      <div class="service-card reveal" style="transition-delay:.1s">
+        <div class="service-visual sv-truck">
+          <!-- IMAGEM: substitua pelo caminho da sua imagem -->
+          <!-- <img src="images/servico-transporte.jpg" alt="Transporte de Materiais" class="service-img"> -->
+          <img src="images/frota caminhao.png" alt="Transporte de Materiais" class="service-img">
+        </div>
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <h3 class="service-title">Transporte de Materiais</h3>
+        <p class="service-desc">Frota completa de caminhões basculantes e caçambas para transporte eficiente de terra, areia, brita, entulho e cascalho.</p>
+        <div class="service-tags">
+          <span class="tag">Terra &amp; Aterro</span>
+          <span class="tag">Areia &amp; Brita</span>
+          <span class="tag">Entulho</span>
+          <span class="tag">Cascalho</span>
+          <span class="tag">Caçambas</span>
+        </div>
+        <a href="#contato" class="service-link">
+          Ver Mais Detalhes
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+        </a>
+      </div>
+
+      <!-- Serviço 3 -->
+      <div class="service-card reveal" style="transition-delay:.2s">
+        <div class="service-visual sv-ground">
+          <!-- IMAGEM: substitua pelo caminho da sua imagem -->
+          <!-- <img src="images/servico-terraplanagem.jpg" alt="Terraplanagem" class="service-img"> -->
+          <svg class="scene-svg" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><radialGradient id="sg3" cx="50%" cy="60%" r="60%"><stop offset="0%" stop-color="#C07800" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+            <rect width="400" height="180" fill="url(#sg3)"/>
+            <path d="M0 160 Q50 130 100 150 Q150 170 200 140 Q250 110 300 145 Q350 165 400 145 L400 180 L0 180Z" fill="rgba(100,60,20,0.25)"/>
+            <path d="M0 150 Q80 120 160 138 Q240 155 320 125 Q360 112 400 130 L400 180 L0 180Z" fill="rgba(192,0,26,0.12)"/>
+            <rect x="130" y="114" width="90" height="22" rx="10" fill="rgba(192,0,26,0.3)"/>
+            <rect x="148" y="88" width="72" height="34" rx="3" fill="rgba(192,0,26,0.25)"/>
+            <rect x="163" y="70" width="40" height="26" rx="3" fill="rgba(192,0,26,0.35)"/>
+            <rect x="100" y="95" width="18" height="38" rx="4" fill="rgba(192,0,26,0.45)"/>
+            <path d="M100 95 L88 100 L88 130 L100 133Z" fill="rgba(192,0,26,0.35)"/>
+          </svg>
+        </div>
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-1-2H5v17h2v-7h5l1 2h7V6h-6zm4 8h-4l-1-2H7V6h5l1 2h5v6z"/></svg>
+        </div>
+        <h3 class="service-title">Serviços de Terraplanagem</h3>
+        <p class="service-desc">Execução completa de projetos com nivelamento preciso, escavação, aterro, desmonte e compactação de terrenos.</p>
+        <div class="service-tags">
+          <span class="tag">Nivelamento</span>
+          <span class="tag">Escavação</span>
+          <span class="tag">Aterro</span>
+          <span class="tag">Desmonte</span>
+          <span class="tag">Compactação</span>
+        </div>
+        <a href="#contato" class="service-link">
+          Ver Mais Detalhes
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       GALERIA
+  ══════════════════════════════════════ -->
+  <section id="galeria">
+    <div class="section-label reveal">Nossos Trabalhos</div>
+    <h2 class="section-title reveal">Galeria de <span class="red">Projetos e Frota</span></h2>
+    <p class="section-sub reveal">Veja a qualidade dos nossos projetos executados e a modernidade da nossa frota.</p>
+
+    <div class="gallery-tabs reveal">
+      <button class="gtab active" data-tab="projetos">Projetos Realizados</button>
+      <button class="gtab" data-tab="frota">Nossa Frota</button>
+    </div>
+
+    <!-- PROJETOS -->
+    <!-- INSTRUÇÕES PARA IMAGENS:
+         Substitua cada <div class="gitem-placeholder"> por uma tag <img>
+         Exemplo: <img src="images/projeto-1.jpg" alt="Terraplanagem Industrial" class="gitem-img">
+    -->
+    <div class="gallery-grid" id="tab-projetos">
+      <div class="gitem gitem-large">
+        <div class="gitem-inner gitem-placeholder" data-label="Adicione sua imagem aqui" style="background:linear-gradient(135deg,#1a0a00,#0a0a0a)">
+          <span class="placeholder-text">📷 projeto-1.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Terraplanagem Industrial — 2024</span></div>
+      </div>
+      <div class="gitem">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#001510,#0a0a0a)">
+          <span class="placeholder-text">📷 projeto-2.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Loteamento Residencial</span></div>
+      </div>
+      <div class="gitem">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#10080a,#0a0a0a)">
+          <span class="placeholder-text">📷 projeto-3.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Aterro Sanitário 2023</span></div>
+      </div>
+      <div class="gitem gitem-wide">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#0a0a10,#0a0a0a)">
+          <span class="placeholder-text">📷 projeto-4.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Pavimentação Viária</span></div>
+      </div>
+      <div class="gitem">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#100a00,#0a0a0a)">
+          <span class="placeholder-text">📷 projeto-5.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Drenagem Urbana</span></div>
+      </div>
+    </div>
+
+    <!-- FROTA -->
+    <div class="gallery-grid hidden" id="tab-frota">
+      <div class="gitem gitem-large">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#1a0000,#0a0a0a)">
+          <span class="placeholder-text">📷 frota-escavadeira.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Escavadeira Hidráulica Cat 320</span></div>
+      </div>
+      <div class="gitem">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#001500,#0a0a0a)">
+          <span class="placeholder-text">📷 frota-caminhao.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Caminhão Basculante 14m³</span></div>
+      </div>
+      <div class="gitem">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#100010,#0a0a0a)">
+          <span class="placeholder-text">📷 frota-trator.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Trator de Esteira D6</span></div>
+      </div>
+      <div class="gitem gitem-wide">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#100800,#0a0a0a)">
+          <span class="placeholder-text">📷 frota-rolo.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Rolo Compactador Vibratório</span></div>
+      </div>
+      <div class="gitem">
+        <div class="gitem-inner gitem-placeholder" style="background:linear-gradient(135deg,#001010,#0a0a0a)">
+          <span class="placeholder-text">📷 frota-retro.jpg</span>
+        </div>
+        <div class="gitem-overlay"><span class="gitem-label">Retroescavadeira JCB 3CX</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DIFERENCIAIS
+  ══════════════════════════════════════ -->
+  <section id="diferenciais">
+    <div class="section-label reveal">Por Que Nos Escolher</div>
+    <h2 class="section-title reveal">Nossos <span class="red">Diferenciais</span></h2>
+
+    <div class="diff-layout">
+      <div class="diff-visual reveal-left">
+        <div class="diff-cert">
+          <div class="diff-cert-top">
+            <div class="diff-cert-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            </div>
+            <div class="diff-cert-info">
+              <h3>Excelência Comprovada</h3>
+              <p>Atuando desde 2011 — 14 anos de mercado</p>
+            </div>
+          </div>
+          <div class="diff-bar">
+            <div class="diff-bar-label">Satisfação dos Clientes <span>98%</span></div>
+            <div class="diff-bar-track"><div class="diff-bar-fill" style="--w:98%"></div></div>
+          </div>
+          <div class="diff-bar">
+            <div class="diff-bar-label">Cumprimento de Prazos <span>95%</span></div>
+            <div class="diff-bar-track"><div class="diff-bar-fill" style="--w:95%"></div></div>
+          </div>
+          <div class="diff-bar">
+            <div class="diff-bar-label">Equipamentos Certificados <span>100%</span></div>
+            <div class="diff-bar-track"><div class="diff-bar-fill" style="--w:100%"></div></div>
+          </div>
+          <div class="diff-bar">
+            <div class="diff-bar-label">Índice de Segurança <span>99%</span></div>
+            <div class="diff-bar-track"><div class="diff-bar-fill" style="--w:99%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diff-features reveal-right">
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div>
+          <div>
+            <h4>Equipe Qualificada e Experiente</h4>
+            <p>Operadores certificados com anos de prática, garantindo eficiência, segurança e qualidade em cada projeto.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg></div>
+          <div>
+            <h4>Equipamentos Modernos</h4>
+            <p>Frota constantemente renovada com maquinários de última geração, revisados e em perfeito estado operacional.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+          <div>
+            <h4>Comprometimento com Prazos</h4>
+            <p>Planejamento detalhado e gestão eficiente para entregar sua obra no prazo combinado, sempre.</p>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
+          <div>
+            <h4>Atendimento Personalizado</h4>
+            <p>Cada cliente recebe atenção exclusiva. Estudamos sua necessidade e criamos a solução mais eficiente para o seu projeto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ÁREA DE ATUAÇÃO
+  ══════════════════════════════════════ -->
+  <section id="area">
+    <div class="section-label reveal">Onde Atuamos</div>
+    <h2 class="section-title reveal">Área de <span class="red">Atuação</span></h2>
+
+    <div class="map-layout reveal">
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=Santa+Inês,+Maranhão,+Brasil&t=&z=10&ie=UTF8&iwloc=&output=embed"
+          allowfullscreen
+          loading="lazy"
+          title="Localização MV Construtora"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-badge">📍 Sede: Santa Inês — MA</div>
+      </div>
+
+      <div class="map-info">
+        <h3>Cobertura Regional Completa</h3>
+        <p>Atendemos projetos em todo o Maranhão e regiões vizinhas, com logística eficiente e mobilização rápida de equipamentos.</p>
+        <ul class="coverage-list">
+          <li>Santa Inês e Região</li>
+          <li>Médio Mearim</li>
+          <li>Pré-Amazônia Maranhense</li>
+          <li>Zona da Mata Maranhense</li>
+          <li>São Luís e Região Metropolitana</li>
+          <li>Atendimento em todo o Maranhão</li>
+        </ul>
+        <div class="contact-quick">
+          <div class="cq-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <div><strong>(98) 9 9999-0000</strong><span>WhatsApp disponível</span></div>
+          </div>
+          <div class="cq-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div><strong>contato@mvconstrutora.com.br</strong><span>Respondemos em até 2h</span></div>
+          </div>
+          <div class="cq-item">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <div><strong>Santa Inês — MA</strong><span>Sede principal</span></div>
+          </div>
+        </div>
+        <a href="#contato" class="btn-primary" style="margin-top:28px;display:inline-flex">Solicitar Atendimento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DEPOIMENTOS
+  ══════════════════════════════════════ -->
+  <section id="depoimentos">
+    <div class="section-label reveal">O Que Dizem de Nós</div>
+    <h2 class="section-title reveal">Depoimentos de <span class="red">Clientes</span></h2>
+
+    <div class="testimonials-track">
+      <div class="tcard reveal">
+        <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tcard-text">"Contratamos a MV Construtora para a terraplanagem de um condomínio de 80 lotes. Prazo cumprido, equipe profissional e equipamentos de primeira. Com certeza voltaremos a contratar."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">CR</div>
+          <div>
+            <div class="tcard-name">Carlos Rodrigues</div>
+            <div class="tcard-role">Diretor — CR Empreendimentos</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard reveal" style="transition-delay:.15s">
+        <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tcard-text">"Utilizamos os caminhões basculantes da MV por mais de 6 meses em obra de saneamento. Atendimento impecável, preço justo e total confiabilidade no transporte. Recomendo sem hesitar."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">FA</div>
+          <div>
+            <div class="tcard-name">Fábio Alves</div>
+            <div class="tcard-role">Eng. Civil — Construtora Alves & Filhos</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard reveal" style="transition-delay:.3s">
+        <div class="tcard-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="tcard-text">"A locação da escavadeira foi rápida e o operador era extremamente habilidoso. Resolveram em 3 dias o que levaria semanas com serviço manual. Profissionalismo em cada detalhe."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">MS</div>
+          <div>
+            <div class="tcard-name">Marcos Sousa</div>
+            <div class="tcard-role">Proprietário — Fazenda Santa Tereza</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners reveal">
+      <div class="partners-label">Empresas que Confiam na MV Construtora</div>
+      <div class="partners-row">
+        <span class="partner-logo">CR Empreend.</span>
+        <span class="partner-logo">Grupo Alves</span>
+        <span class="partner-logo">Infra MA</span>
+        <span class="partner-logo">Construfácil</span>
+        <span class="partner-logo">Terra Forte</span>
+        <span class="partner-logo">Nova Obras</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTATO / FORMULÁRIO
+  ══════════════════════════════════════ -->
+  <section id="contato">
+    <div class="contact-layout">
+      <div class="contact-info reveal-left">
+        <div class="section-label">Fale Conosco</div>
+        <h2>Solicite Seu <span>Orçamento</span> Agora</h2>
+        <p>Nossa equipe entrará em contato em até <strong>2 horas</strong> com uma proposta personalizada para o seu projeto.</p>
+        <div class="contact-details">
+          <div class="cd-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+            <div class="cd-text"><strong>(98) 9 9999-0000</strong><span>Seg a Sáb, 7h às 18h</span></div>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div class="cd-text"><strong>contato@mvconstrutora.com.br</strong><span>Resposta em até 2 horas</span></div>
+          </div>
+          <div class="cd-item">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div class="cd-text"><strong>Santa Inês — MA</strong><span>Atendemos todo o Maranhão</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="contact-form" id="contactFormWrapper">
+          <form id="mainForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="90404032-41e7-4f09-8817-d6fa72af3ff1">
+            <input type="hidden" name="subject" value="Novo pedido de orçamento - MV Construtora">
+            <input type="hidden" name="from_name" value="MV Construtora Website">
+            <input type="hidden" name="redirect" value="false">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome Completo *</label>
+                <input type="text" id="nome" name="name" placeholder="Seu nome" required>
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone / WhatsApp *</label>
+                <input type="tel" id="telefone" name="phone" placeholder="(98) 9 0000-0000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="servico">Tipo de Serviço *</label>
+              <select id="servico" name="service" required>
+                <option value="" disabled selected>Selecione o serviço</option>
+                <option>Locação de Máquinas Pesadas</option>
+                <option>Transporte de Materiais</option>
+                <option>Serviços de Terraplanagem</option>
+                <option>Pacote Completo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Detalhes do Projeto</label>
+              <textarea id="mensagem" name="message" placeholder="Descreva seu projeto: localização, prazo, especificações..."></textarea>
+            </div>
+            <button class="form-submit" id="formSubmitBtn" type="submit">
+              Receba Seu Orçamento Agora
+            </button>
+            <p class="form-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              Seus dados estão protegidos. Não fazemos spam.
+            </p>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="fs-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <h3>Orçamento Solicitado!</h3>
+            <p>Nossa equipe entrará em contato em até 2 horas com sua proposta personalizada.</p>
+          </div>
+          <div class="form-error" id="formError">
+            <div class="fs-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" transform="rotate(45 12 12)"/></svg>
+            </div>
+            <h3>Erro ao Enviar</h3>
+            <p>Por favor, tente novamente ou entre em contato diretamente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <!-- Logo footer -->
+        <img src="images/logo.png" alt="MV Construtora" class="footer-logo-img"
+             onerror="this.style.display='none'; document.getElementById('footerLogoFallback').style.display='flex';">
+        <div class="logo-fallback" id="footerLogoFallback" style="margin-bottom:16px">
+          <div class="logo-box">MV</div>
+          <span class="logo-text">MV <span>Construtora</span></span>
+        </div>
+        <p>Desde 2011, soluções completas em terraplanagem, locação de máquinas pesadas e transporte de materiais. Sua obra, nossa responsabilidade.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://wa.me/5598999990000" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Locação de Máquinas</a></li>
+          <li><a href="#servicos">Transporte de Materiais</a></li>
+          <li><a href="#servicos">Terraplanagem</a></li>
+          <li><a href="#contato">Solicitar Orçamento</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#diferenciais">Sobre Nós</a></li>
+          <li><a href="#galeria">Galeria de Projetos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#area">Área de Atuação</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5598999990000">(98) 9 9999-0000</a></li>
+          <li><a href="mailto:contato@mvconstrutora.com.br">contato@mvconstrutora.com.br</a></li>
+          <li><a href="#area">Santa Inês — MA</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 MV Construtora. Todos os direitos reservados.</span>
+      <span>Fundada em 2011 · <a href="#">Privacidade</a> · <a href="#">Termos</a></span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5598999990000?text=Olá! Gostaria de solicitar um orçamento." class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
