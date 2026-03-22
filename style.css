@@ -59,15 +59,15 @@ nav.scrolled {
 .nav-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 
 .logo-img {
-  height: 80px;
+  height:100px;
   width: auto;
-  max-width: 280px;
+  max-width: 295px;
   object-fit: contain;
   filter: drop-shadow(0 1px 4px rgba(0,0,0,0.7));
   transition: height var(--transition), opacity var(--transition);
 }
 nav.scrolled .logo-img {
-  height: 50px;
+  height: 60px;
 }
 .logo-img:hover { opacity: .85; }
 
